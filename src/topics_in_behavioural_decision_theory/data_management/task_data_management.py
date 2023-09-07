@@ -3,9 +3,9 @@
 import pandas as pd
 import pytask
 
-from topics_in_behavioural_decision__theory.config import BLD, SRC
-from topics_in_behavioural_decision__theory.data_management import clean_data
-from topics_in_behavioural_decision__theory.utilities import read_yaml
+from topics_in_behavioural_decision_theory.config import BLD, SRC
+from topics_in_behavioural_decision_theory.data_management import clean_data
+from topics_in_behavioural_decision_theory.utilities import read_yaml
 
 
 @pytask.mark.depends_on(

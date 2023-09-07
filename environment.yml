@@ -1,5 +1,5 @@
 ---
-name: topics_in_behavioural_decision__theory
+name: topics_in_behavioural_decision_theory
 channels: [conda-forge, nodefaults]
 dependencies:
   - conda-lock

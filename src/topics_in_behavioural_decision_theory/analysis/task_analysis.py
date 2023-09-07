@@ -3,10 +3,13 @@
 import pandas as pd
 import pytask
 
-from topics_in_behavioural_decision__theory.analysis.model import fit_logit_model, load_model
-from topics_in_behavioural_decision__theory.analysis.predict import predict_prob_by_age
-from topics_in_behavioural_decision__theory.config import BLD, GROUPS, SRC
-from topics_in_behavioural_decision__theory.utilities import read_yaml
+from topics_in_behavioural_decision_theory.analysis.model import (
+    fit_logit_model,
+    load_model,
+)
+from topics_in_behavioural_decision_theory.analysis.predict import predict_prob_by_age
+from topics_in_behavioural_decision_theory.config import BLD, GROUPS, SRC
+from topics_in_behavioural_decision_theory.utilities import read_yaml
 
 
 @pytask.mark.depends_on(

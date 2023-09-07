@@ -3,10 +3,10 @@
 import pandas as pd
 import pytask
 
-from topics_in_behavioural_decision__theory.analysis.model import load_model
-from topics_in_behavioural_decision__theory.config import BLD, GROUPS, SRC
-from topics_in_behavioural_decision__theory.final import plot_regression_by_age
-from topics_in_behavioural_decision__theory.utilities import read_yaml
+from topics_in_behavioural_decision_theory.analysis.model import load_model
+from topics_in_behavioural_decision_theory.config import BLD, GROUPS, SRC
+from topics_in_behavioural_decision_theory.final import plot_regression_by_age
+from topics_in_behavioural_decision_theory.utilities import read_yaml
 
 for group in GROUPS:
     kwargs = {

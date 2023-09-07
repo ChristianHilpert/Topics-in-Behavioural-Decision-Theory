@@ -3,9 +3,12 @@ import shutil
 
 import pytask
 from pytask_latex import compilation_steps as cs
-from topics_in_behavioural_decision__theory.config import BLD, PAPER_DIR
+from topics_in_behavioural_decision_theory.config import BLD, PAPER_DIR
 
-documents = ["topics_in_behavioural_decision__theory", "topics_in_behavioural_decision__theory_pres"]
+documents = [
+    "topics_in_behavioural_decision_theory",
+    "topics_in_behavioural_decision_theory_pres",
+]
 
 for document in documents:
 

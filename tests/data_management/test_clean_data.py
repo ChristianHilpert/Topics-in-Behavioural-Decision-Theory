@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
 import pytest
-from topics_in_behavioural_decision__theory.config import TEST_DIR
-from topics_in_behavioural_decision__theory.data_management import clean_data
-from topics_in_behavioural_decision__theory.utilities import read_yaml
+from topics_in_behavioural_decision_theory.config import TEST_DIR
+from topics_in_behavioural_decision_theory.data_management import clean_data
+from topics_in_behavioural_decision_theory.utilities import read_yaml
 
 
 @pytest.fixture()

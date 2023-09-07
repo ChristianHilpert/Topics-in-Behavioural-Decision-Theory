@@ -8,7 +8,7 @@
 # pytask
 .pytask.sqlite3
 .pytask
-
+.DS_Store
 # bld
 bld/
 

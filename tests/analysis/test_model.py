@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 import pytest
-from topics_in_behavioural_decision__theory.analysis.model import fit_logit_model
+from topics_in_behavioural_decision_theory.analysis.model import fit_logit_model
 
 DESIRED_PRECISION = 10e-2
 

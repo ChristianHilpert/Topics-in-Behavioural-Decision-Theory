@@ -2,10 +2,10 @@
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 
 [tool.setuptools_scm]
-write_to = "src/topics_in_behavioural_decision__theory/_version.py"
+write_to = "src/topics_in_behavioural_decision_theory/_version.py"
 
 [tool.pytask.ini_options]
-paths = ["./src/topics_in_behavioural_decision__theory", "./paper"]
+paths = ["./src/topics_in_behavioural_decision_theory", "./paper"]
 infer_latex_dependencies = true
 
 [tool.ruff]
