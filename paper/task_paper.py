@@ -6,6 +6,7 @@ from pytask_latex import compilation_steps as cs
 from topics_in_behavioural_decision_theory.config import BLD, PAPER_DIR
 
 documents = [
+    "00_outline",
     "01_introduction",
     "02_applications_and_limitations_cpt",
     "03_alternative_theories",

@@ -1,0 +1,85 @@
+% !TeX document-id = {41e45e82-ef69-4afe-b598-4ca4a64e5ec2}
+% !TeX program = pdflatex
+% !TeX TS-program = pdflatex
+% !TeX TXS-program:compile = txs:///pdflatex/
+
+% !BIB program = biber
+% !BIB TS-program = biber
+% !TeX TXS-program:bibliography = txs:///biber
+
+
+
+
+%%%%%%%%%%%%%%%%
+%%  PREAMBLE  %%
+%%%%%%%%%%%%%%%%
+
+
+% To ``accept'' all changes in the document:
+%\PassOptionsToPackage{final}{changes}
+
+
+\documentclass[a4paper, 12pt]{article}
+% fleqn: flush-left aligned equations
+
+\newcommand{\papertitle}{\large Topics in Behavioural Decision Making}
+
+\input{0_0_Preamble/Preamble_Fundamental_packages}
+\hypersetup{
+	pdftitle={\papertitle},
+	pdfauthor={Christian Hilpert}
+}
+\input    {0_0_Preamble/Preamble_Page_layout_general}
+\input    {0_0_Preamble/Preamble_Page_layout_paper}
+\subimport{0_0_Preamble/}{Preamble_Fonts_Charter_FiraSans}
+\input    {0_0_Preamble/Preamble_Sansserif_math}
+\input    {0_0_Preamble/Preamble_BibLaTeX_AER}  %\input{0_0_Preamble/Preamble_BibLaTeX_APA}
+\input    {0_0_Preamble/Preamble_Commenting_and_highlighting}
+\input    {0_0_Preamble/Preamble_Miscellaneous}
+
+% Add global hyphenation rules to avoid unwelcome linebreaks:
+\hyphenation{Bu-shong Della-Vigna inter-tem-po-ral K\H{o}-szegi Spren-ger Bala-krish-nan}
+
+\bibliography{refs}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%  DOCUMENT BODY  %%
+%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+\defcitealias{Koszegi2013}{K\H{o}szegi--Szeidl}
+
+\selectlanguage{USenglish} \frenchspacing
+
+\title{\sffamily\bfseries%
+	\papertitle%
+	%\thanks{\protect\input{0_1_Titlepage_paper/Acknowledgments}}%
+}
+
+\author[a]{Christian Hilpert}
+
+\affil[a]{Lingnan College, Sun Yat-sen University}
+
+\date{}
+
+\maketitle
+\renewcommand{\blindmarkup}[1]{\emph{#1}}
+\blindmathfalse
+
+
+\citet{KoeszegiRabin2006, KoeszegiRabin2007}
+
+\phantomsection % Needed for the bibliography bookmark to point to the correct page
+
+\begin{refcontext}[sorting=nyt]  % Sort BIBLIOGRAPHY by alphabet (while CITATIONS are sorted by year)
+\printbibliography[heading=bibintoc]
+\end{refcontext}
+
+
+\end{document}
