@@ -66,7 +66,7 @@ saveas(figure1, 'cpt_utility.png');
 
 p_gain = 0:0.01:1;
 dp =0.64;
-    
+
 figure1 = figure('visible', 'on');
 set(gcf, 'Position', [0 0 width*100, height*100]);
 axes1 = axes('Parent', figure1, 'FontSize', 15);
