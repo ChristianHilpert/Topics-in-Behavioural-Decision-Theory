@@ -31,6 +31,13 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{frametitle}{\centering\vspace{1ex}\insertframetitle\par}
 
+\DeclareMathOperator{\argmax}{arg\,max}
+
+%Theorem
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+%\newtheorem{definition}{Definition}
+
 
 \begin{document}
 
@@ -281,7 +288,7 @@
 \end{equation}\medskip
 \item with \[w(p) = \frac{p^{\delta}}{(p^{\delta}+(1-p)^{\delta})^{\frac{1}{\delta}}}\]
 \item Their (questionable) estimates are $\alpha =0.88$, $\lambda =2.25$, and  $\delta =0.69$\medskip
-    \item There are alternatives to formalize $w$.
+    \item There are alternatives to formalise $w$.
 \end{itemize}
 \end{frame}
 
@@ -310,14 +317,309 @@
         \item Decision from description $\Rightarrow$ overweighting\smallskip
         \item Decision from experience $\Rightarrow$ underweighting\smallskip
         \end{itemize}
-        \item not clear how to interpret:\medskip
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Challenges and discussion - decision weights}
+    \begin{itemize}
+        \item Not clear how to interpret:\medskip
           \begin{itemize}
         \item overestimation (belief) $\Rightarrow$ mistake\smallskip
-        \item overweighting (preference) $\Rightarrow$ not mistake???\smallskip
-        (some evidence fro preference)
+        \item overweighting (preference) $\Rightarrow$ not mistake\smallskip
+       \item There is some evidence pointing towards preferences
            \end{itemize}
     \end{itemize}
 \end{frame}
+
+\section{Applications and Limitations of Cumulative Prospect Theory}
+
+\frame{\frametitle{Agenda}
+\tableofcontents[currentsection]
+}
+
+
+\begin{frame}{Applications and Limitations of CPT}
+    Three sample applications to highlight:\bigskip
+        \begin{enumerate}[i)]
+            \item How to apply CPT\bigskip
+            \item Interesting applications on their own\bigskip
+            \item Key limitations of CPT\bigskip
+        \end{enumerate}
+      
+    \end{frame}
+    
+    
+    \begin{frame}{CPT customers in monopolistic markets - Setup}
+        \begin{itemize}
+            \item \citet{AzevedoGottlieb2012} ask what happens in strategic and market environments with CPT customers?\bigskip
+            \item They consider a monopolistic insurer and CPT customers.\bigskip
+                \item Monopolist can charge any arbitrarily large price policy features unbounded gains or losses with probability approaching zero.\bigskip
+                \item Counterintuitive: insurance raises risk; no solution to firm's problem.\medskip           
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{CPT customers in monopolistic markets - Preview}
+        \begin{itemize}
+            \item \citet{AzevedoGottlieb2012} show that for any insurance policy, there is always another policy that makes both the firm and consumers simultaneously better off.\bigskip
+            \item If consumer's wealth is bounded, the insurer can extract all wealth with probability approaching one.\bigskip
+            \item With Bertrand competition, no equilibrium exists.\bigskip
+        \end{itemize}
+    \end{frame}
+    
+
+
+    \begin{frame}{CPT customers in monopolistic markets - Preview}
+        Additionally,\medskip
+           \begin{itemize}
+               \item Either, individuals pay arbitrarily large amounts for lotteries with finite expected value.\bigskip
+               \item Or, individuals refuse all actuarially fair gambles.\bigskip
+               \item First case implies no equilibrium if supply is endogenous.\bigskip
+               \item Second case rules out simultaneous risk-seeking and aversion (why we use CPT in the first place).\bigskip
+           \end{itemize}
+       \end{frame}
+
+       \begin{frame}{Model of monopolistic insurance and CPT customers}
+           \begin{itemize}
+               \item Gamble: $\mathcal{L} =(g, p; L, 1 - p), g \geq 0, -L\leq 0 $\bigskip
+               \item CPT  customer has preferences:\bigskip
+               \begin{itemize}
+                \item $V(\mathcal{L} )= w^{+}(p)v(g)-\lambda w^{-}(1-p)v(L).$\bigskip
+                \item $w^{+},w^{-}:[0,1] \longrightarrow [0,1]$,\quad $ v:\mathbb{R}_{+} \longrightarrow \mathbb{R}$\medskip
+               \end{itemize}\bigskip
+               \item Assumptions:\medskip
+               \begin{itemize}
+                \item $v$ is continuous, strictly increasing, $v(0)=0$,\medskip
+                \item $ w^{+},w^{-}$ are continuous, strictly increasing\medskip
+                \item $w^{+}(0)=w^{-}(0)=0$; $w^{+}(1)=w^{-}(1)=1$\medskip
+               \end{itemize}
+           \end{itemize}
+       \end{frame}
+       
+       \begin{frame}{Model of monopolistic insurance and CPT customers}
+        \begin{itemize}
+            \item Risk-neutral firm designs $\mathcal{L}$, perfect information, monopolist.\bigskip
+            \item Monopolist's profit: \[\pi(\mathcal{L})=(1-p)L-pg\]\bigskip
+            \item Monopolist maximises expected profit s.t. $V(\mathcal{L})\geq 0$ (participation constraint)\bigskip
+        \end{itemize}
+    \end{frame}
+
+       \begin{frame}{Key result of CPT under monopolistic insurance}
+           \begin{proposition}
+           Suppose either:\medskip
+           \begin{enumerate}[(1)]
+               \item $\lim_{p \to 0} w^{+}(p)v\left(\frac{1}{p}\right)=\infty$, or\medskip
+               \item $\lim_{p \to 0} w^{-}(p)v\left(\frac{1}{p}\right)=0$\medskip
+           \end{enumerate}
+           Then, for any $K_1,K_2$, there exists a lottery $\mathcal{L}$ 
+           s.t. $\pi(\mathcal{L}) \geq K_1$ and $V(\mathcal{L}) >v(K_2)$. 
+           In particular, $\Pi(V)=\infty.$
+           \end{proposition}
+           \hspace*{\fill} \\
+       \textbf{Proof:} Blackboard.
+    %    \begin{itemize}
+    %        \item Consider the lottery$ (\frac{1}{p},p;\frac{1+\pi}{1-p},1-p)$.\\
+    %        \item Assume (1) $\Rightarrow \mathbb{E} [\cdot]= (1- p)\frac{1+\pi}{1-p}-\frac{1}{p}p =\pi  $\\
+    %    and $\lim_{p \to 0} w^{+}(p)v(\frac{1}{p})- \lambda w^{-}(1-p)v(\frac{1+\pi}{1-p})  $
+    %    $\geq \lim_{p \to 0} w^{+}(p)v(\frac{1}{p})- \lambda v(1+\pi)$\\
+    %    $\Rightarrow $  arbitrarily high utility, profit $\pi >0$.  
+    %    \end{itemize}
+       \end{frame}
+    
+
+
+    %    \begin{frame}
+    %        \begin{itemize}
+    %            \item Assume (2). Consider:$ (\frac{u}{p},p;\frac{\pi+u}{1-p},1-p), u,\pi \geq 0.$\\
+    %        $ \mathbb{E} [\cdot]= (1- p)\frac{\pi+u}{1-p}-\frac{u}{p}p =\pi  $\\
+    %        \item CPT:$ w^{+}(p)v(\frac{u}{p})- \lambda w^{-}(1-p)v(\frac{u+\pi}{1-p})  $\\
+    %        \item the limit:\\
+    %     $\lim_{p \to 1}w^{+}(p)v(\frac{u}{p})- \lambda w^{-}(1-p)v(\frac{u+\pi}{1-p})$\\
+    %        $=v(u) -\lambda \lim_{p \to 0} w^{-}(p)v(\frac{\pi+u}{p})=v(u)$\\
+    %        \item $\Rightarrow $  any profit $\pi \geq 0$ ,any utility $v(u) \in [0,v(\infty))$,$p$ close to $1$.
+    %    \end{itemize}
+    %    \end{frame}
+       
+       \begin{frame}{Interpretation: Condition 1 - Lottery}
+       \begin{itemize}
+                \item Large sum $\frac{1}{p}$ with low $p$, and $0$ else.\bigskip
+               \item Expected value is one, gain $\frac{1}{p}$ grows unboundedly as $p \rightarrow 0$.\bigskip
+               \item Customer pays arbitrary amounts for expected value of 1.\bigskip
+               \item Implies infinite expected firm profits, gives arbitrarily large certainty equivalents.\bigskip
+           \end{itemize}
+        \end{frame}
+
+        \begin{frame}{Interpretation: Condition 2 - Insurance}
+            \begin{itemize}
+           \item Large loss $\frac{1}{p}$, with low probability $p$ implies an expected payment $=-1$ and unbounded loss $\frac{1}{p}$\bigskip
+               \item Implies arbitrarily small risk premium.\bigskip
+               \item Customer accepts negative expected payoff for arbitrarily small prices, firm again has infinite profits, customer infinite utility.\bigskip
+               \item Catastrophe bonds below fair price.\bigskip
+               \item Under both conditions, the firm has infinite profits for any lottery. There always is a better one for \alert{both} firm and customers as $p \rightarrow 0$.\bigskip
+       \end{itemize}
+       \end{frame}
+       
+       \begin{frame}{Additional results - homogenous value function}
+           \begin{itemize}
+               \item Additionally, suppose $v(x)=x^\alpha, 0<\alpha \leq 1$, that is, homogeneous of degree $\alpha$.\bigskip
+               \item For any two lotteries $\mathcal{L} =(g,p;L,1-p) $ and 
+               $c\mathcal{L} =(cg ,p; c L,1 - p)$, it holds that \[V(c\mathcal{L}) = c^\alpha V(\mathcal{L}), c>0  \Rightarrow  v(c\mathcal{L}) \geq  V(\mathcal{L})\].
+               \item If individual accepts $\mathcal{L}$, he must also accept $c\mathcal{L}$, hence firm profits $\pi \rightarrow c\pi$.\bigskip
+               \item If a seller can obtain a positive profit, it can obtain any positive profit.\bigskip
+           \end{itemize}
+       \end{frame}
+       
+       \begin{frame}{Some remarks}
+           \begin{itemize}
+               \item The choice of $\omega$ empirically does not matter.\bigskip
+               \item All estimated forms of $\omega$ satisfy our conditions.\bigskip
+               \item Adding a reference point $r\neq 0$ does not change anything.\bigskip
+           \end{itemize}
+       \end{frame}
+
+       \begin{frame}{Some remarks}
+        \begin{itemize}
+            \item Competition $\grave{a}~la$ Bertrand destroys all equilibria.\bigskip
+            \item Heterogeneity and private information do not matter for result.\bigskip
+            \item Wealth constraints $B>0$ bounds profits, remaining analysis remains\bigskip
+            \item Possible solution: global + local utility (next lecture)\bigskip
+        \end{itemize}
+    \end{frame}
+
+
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    \begin{itemize}
+        \item predicts heterogeneity in gambling behavior:\\
+        \begin{enumerate}
+            \item naive: plans, deviate from plan.\\
+            \item sophisticated:knows time inconsistency, cannot commit\\
+            $\Rightarrow$ predicts losing
+            \item sophisticated with commitment\\
+            $\Rightarrow$ predicts behaviours, sticks with (eg: only takes limited cash).\\
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Model:}
+    \begin{itemize}
+    \item same as before:
+        \begin{equation}
+        v(x) = \begin{cases}
+            x^\alpha  &  \text{for} \quad x \geq 0,\\
+            -\lambda (-x)^\alpha & \text{for} \quad x<0,
+            \end{cases}
+        \end{equation}\medskip
+        and \\
+        {\centering $ \omega(p)=\frac{p^\delta }{(p^\delta + (1-p)^\delta)^{\frac{1}{\delta}}} $\\
+
+        }
+        \hspace*{\fill} \\ 
+    \item $ \alpha \in (0,1], \lambda>1,  \delta \in (0,1) $\\ \medskip
+    \item $T+1$ dates,$t=0,1,...,T.$\\ \medskip
+    \item at $t=0$, $50:50$ bet: gain /lose $h$.\\
+    at any time bet, if declines once, game is over.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    Take $T=5$ for example
+        \begin{itemize}
+            \item  Binomial Tree Representation \medskip
+        \end{itemize}
+        \includegraphics[width = 0.5\textwidth]{fig2.png}\\
+    (black: no gamble; white: gamble)
+    \end{frame}
+
+\begin{frame}{Binomial Tree Representation}
+    \begin{itemize}
+        \item each node $(t, j)$.  \medskip
+        \item $t \in {0,\ldots ,T}$ \medskip
+        \item $ j \in {1,\ldots, t+1}$, how far down:$j=1$ top node.\medskip
+        \item Assume: $r=0$,CPT of whole evening
+        \item  time inconsistency:\\
+        $(4,1)$: initial probability $\frac{1}{2}$ : gain 50 or down 30  $\Rightarrow$ gamble\\
+        \item if actually at $(4,1)$:\\
+        $v(40) \geq v(50)\omega (\frac{1}{2})+v(30)(1-\omega (\frac{1}{2})) \Rightarrow$ usually exit. \\
+        $\Rightarrow v(40)-v(30) \geq (v(50)-v(30))\omega (\frac{1}{2})   $;  holds for all $\alpha, \delta \in (0,1)$.\\
+        \item similar: initial plan: stop at (4,5), not keep gambling\\
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    \begin{itemize}
+        \item general description for fixed strategies $s \in S(0,1)$\\
+        \item $\tilde{g_s} $ : the accumulated winnings or losses\\
+        \item $\tilde{g_s} \backsim (30,\frac{7}{32};10,\frac{9}{32};-10,\frac{10}{32};-30,\frac{5}{32};-50,\frac{1}{32} )  $\\
+        \item $\Rightarrow \max_{s \in S(0,1)} V(\tilde{g_s})$\\
+        \item generally no analytically solution.\\
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+\textbf{Numerical analysis} \\  
+\textbf{naive agent} 
+    \begin{itemize}
+        \item many parameters enter, that is $V(\tilde{g_s})>0 $ \medskip
+        \item deviations for naive agent: $(\alpha,\delta,\lambda)=(0.95,0.5,1.5)$
+    \end{itemize}
+    \includegraphics[width = 0.7\textwidth]{fig3.png}\\
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    \begin{itemize}
+        \item mostly: plan a "loss exit" plan \medskip
+        \item some: plan a "gain exit" plan \\
+        \item probability weighting most important \medskip
+    \end{itemize}
+\textbf{sophisticated without commitment}
+    \begin{itemize}
+        \item aware of time inconsistency\medskip
+        \item  uses backward induction
+        \item node $(t,j),t \in [0,T-1]$\\
+        $V(\tilde{g_{t,j}})>v(h(t+2-2j)) $;\\
+         $v(h(t+2-2j))$: leave immediately; \\
+        $ V(\tilde{g_{t,j}})  $: the value of continuing to gamble.\\
+        $\Rightarrow$ rarely enters casino; only if  $\alpha,\lambda $ small,$\delta$ large\\
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    \textbf{sophisticated with commitment}
+    \begin{itemize}
+        \item same as naive agent, but goes through \medskip
+        \item no time inconsistency \medskip
+        \item want to gamble in the region of losses\\
+        \item take a small amount of cash
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{4.2. Barberis (2012,MS)}
+    \textbf{Proposition}    
+    \begin{itemize}
+        \item An EU maximiser stops all Brownian motions with  ??? and small variance at every wealth level where his utility function is of exponential growth.\\ 
+        \item $\Rightarrow$ ever ???? stops immediately.\\
+    \end{itemize}
+    \textbf{Some Implications}    
+    \begin{itemize}
+        \item ??? ,infinite horizon casino \medskip
+        $dX_t=\mu dt+ \sigma dW_t, \mu(x)\equiv \mu <0, \sigma(x)=\sigma >0 $\\
+        $\Rightarrow $ gamble utility ??? , appears almost  ???.\\
+        \item American option: $\max (X_t-\mu, 0)$ if ex. at time t.\\
+        $dX_t=X_t(\mu dt+ \sigma dW_t) $
+        \item $\Rightarrow $ never exercise real option, even if $X_0 > \mu$ \medskip
+        \item no disposition ????
+    \end{itemize}
+    \textbf{Constraints}  
+    \begin{itemize}
+        \item naive \medskip
+        \item probability weighting dominant. \medskip
+    \end{itemize}
+\end{frame}
+
+
 
 
 \begin{frame}[allowframebreaks]
