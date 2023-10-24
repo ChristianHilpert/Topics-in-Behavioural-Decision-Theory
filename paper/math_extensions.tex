@@ -1,0 +1,213 @@
+% This file contains all latex abbreviations.
+
+
+
+%\setbeamertemplate{theorems}[numbered]
+\newtheorem{proposition}{Proposition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{mydef}{Definition}
+\newtheorem{myexample}{Beispiel}
+
+
+\newcommand{\dotcup}{\mathaccent\cdot\cup}
+\newcommand{\sequenceWoIndex}[4]{\left(#1\right)_{#2=#3}^{#4}}
+\newcommand{\sequence}[4]{\left(#1_{#2}\right)_{#2=#3}^{#4}}
+\newcommand{\ysequence}[3]{\sequence{y}{#1}{#2}{#3}}
+\newcommand{\xsequence}[3]{\sequence{x}{#1}{#2}{#3}}
+\newcommand{\zsequence}[3]{\sequence{z}{#1}{#2}{#3}}
+\newcommand{\twert}[2]{\!\!\begin{array}[t]{c}#1\\[-1.0ex]{\scriptstyle[#2]}\end{array}\!\!}
+
+\newcommand{\vektor}[2]{\left[#1,\ldots,#2\right]}
+\newcommand{\ep}[1]{\textcolor{red}{#1}}
+
+\newcommand{\identityMatrix}[1]{\mathcal{I}_{#1}}
+\newcommand{\zeroMatrix}[2]{\mat{0}_{#1,#2}}
+\newcommand{\oneMatrix}[2]{\mat{1}_{#1,#2}}
+
+\newcommand{\myset}[4]{\left\{#1_{#2}\right\}_{#2=#3}^{#4}}
+
+\newcommand{\rziie}{[0,\infty)}
+\newcommand{\rzeie}{(0,\infty)}
+
+\newcommand{\possemdef}[1]{\mathbb{S}^+_{#1}}
+
+\newcommand{\realnumbers}{\mathbb{R}}
+\newcommand{\realnumbersp}{\mathbb{R}_+}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\complexnumbers}{\mathbb{C}}
+\newcommand{\naturalnumbers}{\mathbb{N}_0}
+\newcommand{\naturalnumbersp}{\mathbb{N}_+}
+\newcommand{\naturalnumberspp}{\mathbb{N}_{++}}
+\newcommand{\positivenaturalnumbers}{\mathbb{N}_+}
+\newcommand{\rationalnumbers}{\mathbb{Q}}
+
+\newcommand{\indicator}[2]{\mathbb{I}_{#1}\left( #2 \right)}
+\DeclareMathOperator{\simiid}{\stackrel{iid}{\sim}}
+\DeclareMathOperator{\dd}{\mathrm d}
+\DeclareMathOperator{\ee}{\mathrm e}
+\DeclareMathOperator\sgn{sgn}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\DeclareMathOperator{\pto}{\stackrel{p}{\to}}
+\DeclareMathOperator{\asto}{\stackrel{a.s.}{\to}}
+\DeclareMathOperator{\dto}{\stackrel{d}{\to}}
+\newcommand{\limni}[2]{\lim_{n\to\infty}#1=#2}
+\newcommand{\su}[3]{\sum_{#1=#2}^{#3}}
+\newcommand{\sumzinf}[2]{\su{#1}{0}{\infty}#2}
+\newcommand{\probLetter}{\mathbb{P}}
+\newcommand{\prob}[1]{\probLetter\left(#1\right)}
+
+\newcommand{\average}[1]{\overline{#1}}
+\newcommand{\meanLetter}{\mathbb{E}}
+\newcommand{\meanParenthesisLeft}{[}
+\newcommand{\meanParenthesisRight}{]}
+\newcommand{\mean}[1]{\meanLetter\left\meanParenthesisLeft#1\right\meanParenthesisRight}
+\newcommand{\meanWithIndex}[2]{\meanLetter_{#1}\left\meanParenthesisLeft#2\right\meanParenthesisRight}
+\newcommand{\condMean}[2]{\meanLetter\left\meanParenthesisLeft#1|#2\right\meanParenthesisRight}
+\newcommand{\var}[1]{\mathbb{V}  \left(#1\right)}
+\newcommand{\condVar}[2]{\mathbb{V}  \left(#1|#2\right)}
+\DeclareMathOperator{\covOperator}{Cov}
+\newcommand{\covLetter}{\covOperator}
+\newcommand{\covParenthesisLeft}{[}
+\newcommand{\covParenthesisRight}{]}
+\newcommand{\covDelimiter}{,}
+\newcommand{\cov}[2]{\covLetter\left\covParenthesisLeft#1\covDelimiter#2\right\covParenthesisRight}
+\newcommand{\condCov}[3]{\covLetter\left\covParenthesisLeft#1\covDelimiter#2|#3\right\covParenthesisRight}
+\newcommand{\skewLetter}{\mathbb{S}}
+\newcommand{\skewParenthesisLeft}{(}
+\newcommand{\skewParenthesisRight}{)}
+\newcommand{\skewness}[1]{\skewLetter\left\skewParenthesisLeft#1\right\skewParenthesisRight}
+\newcommand{\kurtLetter}{\mathbb{K}}
+\newcommand{\kurtParenthesisLeft}{(}
+\newcommand{\kurtParenthesisRight}{)}
+\newcommand{\kurtosis}[1]{\kurtLetter\left\kurtParenthesisLeft#1\right\kurtParenthesisRight}
+\newcommand{\exckurtosis}[1]{\kurtLetter^{*}\left\kurtParenthesisLeft#1\right\kurtParenthesisRight}
+
+\newcommand{\ind}[2]{\mathbb{I}_{#1}#2}
+
+\newcommand{\mbd}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\mbd{#1}}
+\newcommand{\inverse}[1]{#1^{\ensuremath{-1}}}
+\newcommand{\transpose}[1]{#1^{\ensuremath{\mathsf{T}}}}
+\newcommand{\invTranspose}[1]{#1^{\ensuremath{\mathsf{-T}}}}
+
+\newcommand{\corr}[2]{{\mathbb{C}\left(#1,#2\right)}}
+\newcommand{\condCorr}[3]{\mathbb{C}\left(#1,#2|#3\right)}
+
+\newcommand{\NormalDistributionSymbol}{\mathcal{N}}
+\newcommand{\NormalDistribution}   [2]{\NormalDistributionSymbol\left(#1,#2\right)}
+
+\newcommand{\GammaDistributionSymbol}{\mathcal{G}}
+\newcommand{\GammaDistribution}    [2]{\GammaDistributionSymbol\left(#1,#2\right)}
+
+\newcommand{\CauchyDistribution}   [2]{\mathcal{C}\left(#1,#2\right)}
+\newcommand{\UniformDistributionSet}[1]{\mathcal{U}\left(#1\right)}
+\newcommand{\UniformDistribution}  [2]{\mathcal{U}\left(#1,#2\right)}
+\newcommand{\UniformDistributionOC}  [2]{\mathcal{U}\left(#1,#2\right]}
+\newcommand{\UniformDistributionCO}  [2]{\mathcal{U}\left[#1,#2\right)}
+\newcommand{\UniformDistributionCC}  [2]{\mathcal{U}\left[#1,#2\right]}
+\newcommand{\ExpDistribution}      [1]{\mathcal{E}\left(#1\right)}
+\newcommand{\BetaDistribution}     [2]{\mathcal{B}\left(#1,#2\right)}
+\newcommand{\ChiSqDistribution}    [1]{\chi^2\left(#1\right)}
+
+\newcommand{\BinomialDistribution} [2]{\mathcal{BIN}(#1,#2)}
+\newcommand{\MultinomialDistribution}{Multi}
+\newcommand{\BernoulliDistribution}[1]{\mathcal{BER}(#1)}
+\newcommand{\GeoDistribution}      [1]{\mathcal{GEO}(#1)}
+\newcommand{\NegBinDistribution}{NegBin}
+\newcommand{\PoissonDistribution}  [1]{\mathcal{POI}(#1)}
+\newcommand{\DiscreteUniformDistribution}{DiscUnif}
+
+
+% added by René
+\newcommand{\einsvec}{\boldsymbol{1}}
+
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\bSigma}{\boldsymbol{\Sigma}}
+\newcommand{\beps}{\boldsymbol{\varepsilon}}
+\newcommand{\bR}{\boldsymbol{R}}
+\newcommand{\bmu}{\boldsymbol{\mu}}
+
+\newcommand{\muhat}{\hat{\mu}}
+\newcommand{\sigmahat}{\hat{\sigma}}
+\newcommand{\alphahat}{\hat{\alpha}}
+\newcommand{\betahat}{\hat{\beta}}
+\newcommand{\Sigmahat}{\hat{\Sigma}}
+
+\newcommand{\bmuhat}{\hat{\boldsymbol{\mu}}}
+\newcommand{\bsigmahat}{\hat{\boldsymbol{\sigma}}}
+\newcommand{\balphahat}{\hat{\boldsymbol{\alpha}}}
+\newcommand{\bbetahat}{\hat{\boldsymbol{\beta}}}
+\newcommand{\bSigmahat}{\hat{\boldsymbol{\Sigma}}}
+
+\newcommand{\hba}{\hat{\boldsymbol{\alpha}}}
+\newcommand{\hbb}{\hat{\boldsymbol{\beta}}}
+\newcommand{\hbs}{\hat{\boldsymbol{\Sigma}}}
+
+\newcommand{\kov}[1]{\text{Cov} \left[ #1 \right]}
+
+% old
+
+\newcommand{\bbn}{\mathbb{N}}
+\newcommand{\bbz}{\mathbb{Z}}
+\newcommand{\bbr}{\mathbb{R}}
+\newcommand{\bbc}{\mathbb{C}}
+\newcommand{\bbd}{\mathbb{D}}
+\newcommand{\bbq}{\mathbb{Q}}
+\newcommand{\bbk}{\mathbb{K}}
+\newcommand{\bbs}{\mathbb{S}}
+\newcommand{\bbx}{\mathbf{X}}
+\newcommand{\bbl}{\mathbf{L}}
+\newcommand{\diag}{\mathrm{diag}}
+\renewcommand{\vec}{\mathrm{vec}}
+\newcommand{\vech}{\mathrm{vech}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\limp}{\stackrel{P}{\rightarrow}} %convergence in probability
+\newcommand{\limd}{\stackrel{\mathscr{D}}{\rightarrow}} %convergence in distribution
+\newcommand{\limas}{\stackrel{\rm a.s.}{\rightarrow}}%almost sure convergence
+\newcommand{\limv}{\stackrel{v}{\rightarrow}}%vague convergence
+\newcommand{\eqd}{\stackrel{\mathscr{D}}{=}}
+\newcommand{\bx}{\mathbf{X}}
+\newcommand{\bba}{\mathbb{A}}
+\newcommand{\bm}{\mathbf{m}}
+\newcommand{\bs}{\mathbf{\Sigma}}
+\newcommand{\ba}{\mathbf{A}}
+
+\newcommand{\bp}{\mathbf{\Phi}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bt}{\mathbf{\Theta}}
+\newcommand{\bj}{\mathbf{J}}
+\newcommand{\bv}{\mathbf{V}}
+\newcommand{\by}{\mathbf{Y}}
+
+\newcommand{\xto}{{x\to\infty}}
+\newcommand{\nto}{{n\to\infty}}
+\newcommand{\tto}{{t\to\infty}}
+
+\newcommand{\dlim}{\displaystyle\lim}
+\newcommand{\cals}{{\cal S}}
+\newcommand{\call}{{\cal L}}
+\newcommand{\calr}{{\cal R}}
+
+\newcommand{\al}{{\alpha}}
+\newcommand{\la}{{\lambda}}
+\newcommand{\La}{{\Lambda}}
+\newcommand{\eps}{{\epsilon}}
+\newcommand{\vep}{{\varepsilon}}
+\newcommand{\ga}{{\gamma}}
+\newcommand{\Ga}{{\Gamma}}
+\newcommand{\vp}{{\varphi}}
+\newcommand{\si}{{\sigma}}
+
+\newcommand{\eig}{{\mathrm{eig}}}
+\newcommand{\card}{{\mathrm{card}}}
+%\newcommand{\var}{{\mathrm{var}}}
+%\newcommand{\cov}{{\mathrm{cov}}}
+\newcommand{\acov}{{\mathrm{acov}}}
+\newcommand{\acorr}{{\mathrm{acorr}}}
+
+\newcommand{\ov}{\overline}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+\renewcommand{\top}{\mathsf{T}}

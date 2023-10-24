@@ -5,7 +5,7 @@ import pytask
 from pytask_latex import compilation_steps as cs
 from topics_in_behavioural_decision_theory.config import BLD, PAPER_DIR
 
-documents = ["00_outline", "01_introduction"]
+documents = ["00_outline", "01_introduction", "01_lecture_lingnan"]
 
 for document in documents:
 

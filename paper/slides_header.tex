@@ -1,0 +1,88 @@
+\documentclass[11pt, serif, aspectratio=169]{beamer}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{float, afterpage, rotating, graphicx}
+\usepackage{longtable, booktabs, tabularx}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, array}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={color=mycol}}
+\usepackage{subcaption}
+\usepackage{colortbl}
+\usepackage{tikz-cd}
+\tikzset{%
+   symbol/.style={%
+       draw=none,
+       every to/.append style={%
+           edge node={node [sloped, allow upside down, auto=false]{$#1$}}}
+   }
+}
+\setbeamertemplate{theorems}[numbered]
+
+\usepackage[backend=bibtex, natbib=true, bibencoding=inputenc, bibstyle=authoryear-ibid, citestyle=authoryear-comp, maxcitenames=3, maxbibnames=10]{biblatex}
+\setlength{\bibitemsep}{1.5ex}
+\addbibresource{refs.bib}
+
+%\hypersetup{colorlinks=true, linkcolor=black, anchorcolor=black, citecolor=black, filecolor=black, menucolor=black, runcolor=black, urlcolor=black}
+ %\usetheme{CambridgeUS}
+
+\mode<presentation> {
+  \setbeamertemplate{frametitle}{\centering\vspace{1ex}\insertframetitle\par}
+  \useinnertheme{rounded}
+  \definecolor{mycol}{rgb}{0.666666667, 0.1176471, 0.145098}
+  %\definecolor{mycol}{rgb}{0.4, 0.04705882, 0.05882353}
+  \definecolor{mycol2}{rgb}{0.31, 0.5, 0.73}
+  \definecolor{mycol3}{rgb}{0.4, 0.4, 0.4}
+  \definecolor{mycol4}{rgb}{0.8627451,  0.8666667, 0.8745098}
+  \useoutertheme{infolines}
+
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamercolor{palette primary}{fg=white,bg=mycol} % changed this
+  \setbeamercolor{palette secondary}{fg=white,bg=mycol} % changed this
+  \setbeamercolor{palette tertiary}{fg=white,bg=mycol} % changed this
+  \setbeamercolor{palette quaternary}{fg=white,bg=mycol4}
+  \renewcommand{\alert}[1]{{\color{mycol} #1}}
+  \setbeamercolor{frametitle}{fg=black,bg=white}
+  \setbeamercolor{titlelike}{parent=structure,fg=white,bg=mycol}
+  \setbeamercolor{block title}{fg=white,bg=mycol2}
+  \setbeamercolor{block body}{bg=mycol4}
+  \setbeamertemplate{itemize items}{\color{black}$\triangleright$}
+  \setbeamertemplate{itemize subitems}{\color{mycol}$\triangleright$}
+  %\setbeamertemplate{itemize subitem}{\color{black} $\blacktriangleright$}
+  \setbeamercolor{enumerate item}{fg=mycol2}
+  \setbeamercolor{section number projected}{bg=mycol2,fg=mycol2}
+  \setbeamercolor{subsection number projected}{bg=mycol2,fg=mycol2}
+  \setbeamertemplate{section in toc}{{\color{mycol2}\tiny$\blacksquare$\quad} \inserttocsection}
+  \setbeamercolor{section in toc}{fg=mycol}
+  \setbeamercolor{bibliography item}{fg=mycol,bg=white}
+  \setbeamercolor*{bibliography entry title}{fg=mycol,bg=white}
+  \setbeamercolor*{bibliography entry author}{fg=mycol3,bg=white}
+  \setbeamercolor*{bibliography entry journal}{fg=mycol3,bg=white}
+  \setbeamercolor*{bibliography entry note}{fg=mycol3,bg=white}
+
+  \setbeamercolor{section in head/foot}{fg=white, bg=mycol}
+}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+%\setlength{\bottomsep20pt}
+%\setlength{\listparindent}{\parindent}%
+%\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+
+}{\end{list}}
+
+% New font size for tables
+%-----------------------------------------------------
+\makeatletter
+\newcommand*\tablesize{\@setfontsize\tablesize{7.25}{8.0}}
+\makeatother
+
+%\input{math_extensions}
+\input{math_extensions}
