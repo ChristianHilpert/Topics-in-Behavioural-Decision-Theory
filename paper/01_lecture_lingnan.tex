@@ -672,6 +672,195 @@
 }
 
 
+\begin{frame}{Dynamic approach to gambling under CPT}
+    \begin{itemize}
+        \item Consider \citet{EbertStrack2015}.\medskip
+        \item Take a dynamic perspective on gambling decisions under CPT.\medskip
+        \item Key takeaway: CPT agent never stops gambling/investing.\medskip
+        \item Key property: "Skewness preference in the small".\medskip
+        \item Opposite of \citet{AzevedoGottlieb2012} - huge gambles.\medskip
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Skewness preference in the small}
+    \begin{itemize}
+        \item Consider a simple, small, lottery-like risk with negative expectation.\medskip
+        \item Idea of the CPT gambler: If I lose a bit more, I stop.\medskip
+        \item Investment: never exercise attractive  options\medskip
+        \item Key assumption: probability weighting dominate loss aversion\medskip
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Model layout}
+    \begin{itemize}
+        \item Formally, binary risk: \[L = (G, p, L, 1 - p)\]\medskip
+        \item CPT utility:
+    \begin{equation}
+        CPT = \begin{cases}
+        [1-w^+(p)]V(L)+w^+(p)V(g),  & r \leq  L\\
+        w^-(1-p)V(L)+w^+(p)V(g) ,  & L< r \leq g \\
+        w^-(1-p)V(L)+[1-w^-(1-p)]V(g),  & g< r\\
+        \end{cases}
+    \end{equation}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model layout}
+    \begin{itemize}
+    \item Weighting function properties:
+    \begin{align*}
+        w^-,w^+:[0,1] \rightarrow [0,1],\, \text{non-decreasing}\\
+        w^+(0) = w^-(0) = 0\\
+        w^+(1) = w^-(1) = 1
+    \end{align*}
+    \item Value function properties: continuous, increasing $V:\mathbb{R} \rightarrow \mathbb{R}$ with $V(r) = 0$\medskip
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Two key assumptions - value function}
+    \begin{assumption}[1]
+    \begin{itemize}
+        \item The value function U has finite left and right derivatives,
+       $\partial _-V(x)$ and $\partial _+V(x)$ at every wealth level $x$.\medskip
+        \item Further, $\lambda = \sup _{x\in \mathbb{R} } \frac{\partial _-V(x)}{\partial _+V(x)} < \infty$ exists.\medskip
+        \item $\Rightarrow$ kink not too extreme, no infinite loss aversion.\medskip
+        \item \citep{KahnemanTversky1979} does not work, requires minimal modification\medskip
+    \end{itemize}
+\end{assumption}
+\end{frame}
+
+\begin{frame}{Two key assumptions - weighting function}
+\begin{assumption}[2]
+    There exists at least one $p \in (0,1)$ such that:\medskip
+    \begin{enumerate}[(i)]
+        \item $w^+(p)> \frac{\lambda}{1-p+\lambda p} = b_{\lambda}(p)$ \medskip
+        \item $w^-(1-p)< \frac{1-p}{1-p+\lambda p} = b_{1/\lambda}(1-p)$  \medskip
+	\end{enumerate}
+    Satisfied by any common function of $w$.
+\end{assumption}
+\end{frame}
+
+
+\begin{frame}{Discussion of benchmark weighthing functions}
+    \begin{itemize}
+        \item Consider the weighting function \[b_\theta (p)=\frac{\theta p}{1-p+\theta p}\]
+        with $(\theta=1)$ and $b_\theta(0)=0, b_\theta(1)=1$.\medskip
+        \item If $\theta>1$, $b$ is concave and above the diagonal.\medskip
+        \item If $\theta<1$, $b$ is convex and below the diagonal.\medskip
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Discussion of benchmark weighthing functions}
+    \begin{itemize}
+        \item Hence, Assumption~2 is satisfied: \[\omega ^{+}(5\%)> b_\lambda(5\%) \quad \text{and} \quad \omega ^{-}(95\%)> b_\frac{1}{\lambda}(95\%)\]
+        \item At least one probability sufficiently overweighted by $\omega^+$: \[\omega^+(p)>b_{\lambda}(p) \geq p\]
+        \item and the complimentary probability $1-p$ is sufficiently underweighted by $\omega^- :$
+        \[\omega^-(1-p) < b_{\frac{1}{\lambda}}(1-p) \leq 1-p\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Assumption 2 and the benchmark weighting functions}
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth]{decomposition_distortions1}
+        \caption{\citet{EbertStrack2015}, online appendix, Figure W1.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Assumption 2 and the benchmark weighting functions}
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth]{decomposition_distortions2}
+        \caption{\citet{EbertStrack2015}, online appendix, Figure W1.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Assumption 2 and the benchmark weighting functions}
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth]{decomposition_distortions3}
+        \caption{\citet{EbertStrack2015}, online appendix, Figure W1.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Assumption 2 and the benchmark weighting functions}
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth]{decomposition_distortions4}
+        \caption{\citet{EbertStrack2015}, online appendix, Figure W1.}
+    \end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Main result}
+    \begin{theorem}
+        Under Assumptions 1 and 2, for every wealth level there exists an attractive zero-mean binary lottery that is arbitrarily small.
+	\end{theorem}
+
+    \begin{corollary}
+        Under Assumptions 1 and 2, for every wealth level there exists an attractive, arbitrarily small binary lottery with negative mean.
+	\end{corollary}
+\end{frame}
+
+\begin{frame}{Main result - interpretation}
+    \begin{itemize}
+        \item Generally, risk aversion is defined as every fair risk\medskip
+        \item Here: skewness preference in the small thus implies that, at every wealth level, a CPT agent is not risk averse.\medskip
+        \item Sufficiently small risks are attractive to CPT agents.\medskip
+        \item \citet{AzevedoGottlieb2012}: skewness preference in the large, $p\approx 7.2$ for CPT weight $\Rightarrow$ not so small!\medskip
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Dynamic consequences}
+    \begin{itemize}
+        \item What does skewness preference in the small do?\medskip
+        \item Consider Markov diffusion $ X= (X_t)_{t \in \mathbb{R}_+ }$
+        \[dX_t = \mu(X_t)dt + \sigma (X_t)dW_t\]
+        \item Brownian motion $(W_t)_{t \in \mathbb{R}_+ }$, drift $\mu:\mathbb{R} \rightarrow \mathbb{R}$, volatility $\sigma: \mathbb{R}  \rightarrow (0,\infty)$ Lipschitz continuous.\medskip
+        \item Investment or gambling strategies: integrable stopping times $\tau$, adapted filtration $(\mathcal{F} _t)_{t \in \mathbb{R}_+ }$\medskip
+        \item CPT utility of strategy $\tau$ given $\mathcal{F} _t$, $CPT(X_\tau,\mathcal{F}_t)$\medskip
+        \item Hence, we have  time inconsistency \citep{Barberis2012a}: $\tau$ may changed later\medskip
+       	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Dynamic consequences}
+    \begin{itemize}
+        \item A naive investor does not anticipate that\medskip
+        \item He stops at $t$ if $CPT(X_\tau,\mathcal{F}_t) \leq CPT(X_t,\mathcal{F}_t)=U(X_t)$\medskip
+        \item $U(X_t) \geq \sup_{\tau \geq t} CPT(X_\tau,\mathcal{F}_t)$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Until the bitter end - CPT agent never stops}
+    \begin{theorem}
+        \begin{itemize}
+        \item Under Assumptions 1 and 2, the naive CPT agent never stops.\medskip
+        \item Reference point can be dynamic and change\medskip
+        \item Information: simple two-threshold strategy:
+        Stoping if utility drop slightly while continuing until utility raises a lot always exceeds stopping.\medskip
+	\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Where do we stand - summary}
+    \begin{itemize}
+        \item Cumulative prospect theory generally is one of the most successful alternatives to expected utility theory\medskip
+        \item Is one of the standard behavioural approaches\medskip
+        \item It is designed for experimental settings\medskip
+        \item Extrapolating it to other setting requires care\medskip
+        \item It has strong limitations mostly stemming from probability weighting\medskip
+    \end{itemize}
+\end{frame}
+
+
+
+
 \section{Alternative Theories of Choice under Risk}
 \subsection{Reference-Dependent Risk Attitudes}
 \subsection{Salience Theory}

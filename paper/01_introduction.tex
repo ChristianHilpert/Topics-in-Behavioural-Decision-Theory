@@ -37,6 +37,7 @@
 \newtheorem{assumption}{Assumption}
 \newtheorem{proposition}{Proposition}
 %\newtheorem{definition}{Definition}
+%\newtheorem{theorem}{Theorem}
 
 
 \begin{document}
@@ -786,13 +787,21 @@
 
 \begin{frame}{Discussion of benchmark weighthing functions}
     \begin{itemize}
-        \item $b_\theta (p)=\frac{\theta p}{1-p+\theta p} $ , $ (\theta=1)$ \medskip
-        \item $b_\theta(0)=0, b_\theta(1)=1$\medskip
-        \item $\theta>1 \Rightarrow$ concave, above $45^{ \circ}$\medskip
-        \item $\theta<1 \Rightarrow$ convex, below $45^{ \circ}$\medskip
-        \item $\Rightarrow$ A2 satisfied: $\omega ^{+}(5\%)> b_\lambda(5\%) $;\quad $ \omega ^{-}(95\%)> b_\frac{1}{\lambda}(95\%) $\medskip
-        \item At least one probability sufficiently overweighted by $\omega^+ : \omega^+(p)>b_{\lambda}(p) \geq p$\medskip
-        \item and the complimentary probability $1-p$ is ?? by $\omega^- :\omega^-(1-p) < b_{\frac{1}{\lambda}}(1-p) \leq 1-p$ .\medskip
+        \item Consider the weighting function \[b_\theta (p)=\frac{\theta p}{1-p+\theta p}\]
+        with $(\theta=1)$ and $b_\theta(0)=0, b_\theta(1)=1$.\medskip
+        \item If $\theta>1$, $b$ is concave and above the diagonal.\medskip
+        \item If $\theta<1$, $b$ is convex and below the diagonal.\medskip
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Discussion of benchmark weighthing functions}
+    \begin{itemize}
+        \item Hence, Assumption~2 is satisfied: \[\omega ^{+}(5\%)> b_\lambda(5\%) \quad \text{and} \quad \omega ^{-}(95\%)> b_\frac{1}{\lambda}(95\%)\]
+        \item At least one probability sufficiently overweighted by $\omega^+$: \[\omega^+(p)>b_{\lambda}(p) \geq p\]
+        \item and the complimentary probability $1-p$ is sufficiently underweighted by $\omega^- :$
+        \[\omega^-(1-p) < b_{\frac{1}{\lambda}}(1-p) \leq 1-p\]
 	\end{itemize}
 \end{frame}
 
@@ -832,51 +841,65 @@
 
 
 
-\begin{frame}{4.3 Ebert and Strack, 2015, AER}
+\begin{frame}{Main result}
+    \begin{theorem}
+        Under Assumptions 1 and 2, for every wealth level there exists an attractive zero-mean binary lottery that is arbitrarily small.
+	\end{theorem}
 
-    \begin{itemize}
-        \item Under Assumptions 1 and 2, for every wealth level there exists an attractive zero-mean binary lottery that is arbitrarily small. \medskip
-	\end{itemize}
+    \begin{corollary}
+        Under Assumptions 1 and 2, for every wealth level there exists an attractive, arbitrarily small binary lottery with negative mean.
+	\end{corollary}
+\end{frame}
 
-    \textbf{Corollary}\\
+\begin{frame}{Main result - interpretation}
     \begin{itemize}
-        \item  Under Assumptions 1 and 2, for every wealth level there exists an attractive, arbitrarily small binary lottery with negative mean.\medskip
-	\end{itemize}
-    \begin{itemize}
-        \item generally, risk aversion is defined as every fair risk\medskip
-        \item Here: skewness preference in the small thus implies that, at every wealth level, a CPT agent is not risk averse\medskip
-        \item $\Rightarrow $  sufficiently small risks are attractive to CPT\medskip
-        \item \citet{AzevedoGottlieb2012} $\Rightarrow$ skewness preference in the large, $p\approx 7.2$ for CPT weight $\Rightarrow$ not so small!\medskip
+        \item Generally, risk aversion is defined as every fair risk\medskip
+        \item Here: skewness preference in the small thus implies that, at every wealth level, a CPT agent is not risk averse.\medskip
+        \item Sufficiently small risks are attractive to CPT agents.\medskip
+        \item \citet{AzevedoGottlieb2012}: skewness preference in the large, $p\approx 7.2$ for CPT weight $\Rightarrow$ not so small!\medskip
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{4.3 Ebert and Strack, 2015, AER}
-    \textbf{Dynamic Consequences}\\
+\begin{frame}{Dynamic consequences}
     \begin{itemize}
-        \item what does skewness preference in the small do?\medskip
-        \item consider  Markov diffusion $ X= (X_t)_{t \in \mathbb{R}_+ }$ ; $dX_t = \mu(X_t)dt + \sigma (X_t)dW_t $,\medskip
-        \item $(W_t)_{t \in \mathbb{R}_+ }$: a Brownian motion\medskip
-        \item $\mu:\mathbb{R} \rightarrow \mathbb{R} $ \medskip
-        \item $\sigma : \mathbb{R}  \rightarrow (0,\infty) $ Lipschitz continuous\medskip
-        \item Investment or gambling strategies : integrable stopping times $\tau $, adapted filtration $(\mathcal{F} _t)_{t \in \mathbb{R}_+ } $ (all avaliable information)\medskip
-        \item CPT utility of strategy $\tau$ given $\mathcal{F} _t$, $CPT(X_\tau,\mathcal{F}_t)$ (time inconsistency)\medskip
-        \item $\Rightarrow \tau$ may be changed later\medskip
+        \item What does skewness preference in the small do?\medskip
+        \item Consider Markov diffusion $ X= (X_t)_{t \in \mathbb{R}_+ }$
+        \[dX_t = \mu(X_t)dt + \sigma (X_t)dW_t\]
+        \item Brownian motion $(W_t)_{t \in \mathbb{R}_+ }$, drift $\mu:\mathbb{R} \rightarrow \mathbb{R}$, volatility $\sigma: \mathbb{R}  \rightarrow (0,\infty)$ Lipschitz continuous.\medskip
+        \item Investment or gambling strategies: integrable stopping times $\tau$, adapted filtration $(\mathcal{F} _t)_{t \in \mathbb{R}_+ }$\medskip
+        \item CPT utility of strategy $\tau$ given $\mathcal{F} _t$, $CPT(X_\tau,\mathcal{F}_t)$\medskip
+        \item Hence, we have  time inconsistency \citep{Barberis2012a}: $\tau$ may changed later\medskip
        	\end{itemize}
 \end{frame}
 
 
-\begin{frame}{4.3 Ebert and Strack, 2015, AER}
+\begin{frame}{Dynamic consequences}
     \begin{itemize}
         \item A naive investor does not anticipate that\medskip
-        \item $\Rightarrow$ stops at $t$ if  $CPT(X_\tau,\mathcal{F}_t) \leq CPT(X_t,\mathcal{F}_t)=U(X_t) $\medskip
+        \item He stops at $t$ if $CPT(X_\tau,\mathcal{F}_t) \leq CPT(X_t,\mathcal{F}_t)=U(X_t)$\medskip
         \item $U(X_t) \geq \sup_{\tau \geq t} CPT(X_\tau,\mathcal{F}_t)$
     \end{itemize}
- \textbf{Theorem 2}\\
-    \begin{itemize}
-        \item Under Assumptions 1 and 2, the naive CPT agent never stops. (preference point can be dynamic and change)\medskip
-        \item Information : simple two-threshold strategy: stops if utility drops, continue utility raised.\medskip
-        \item a lot always exceeds stopping.\medskip
+\end{frame}
+
+\begin{frame}{Until the bitter end - CPT agent never stops}
+    \begin{theorem}
+        \begin{itemize}
+        \item Under Assumptions 1 and 2, the naive CPT agent never stops.\medskip
+        \item Reference point can be dynamic and change\medskip
+        \item Information: simple two-threshold strategy:
+        Stoping if utility drop slightly while continuing until utility raises a lot always exceeds stopping.\medskip
 	\end{itemize}
+\end{theorem}
+\end{frame}
+
+\begin{frame}{Where do we stand - summary}
+    \begin{itemize}
+        \item Cumulative prospect theory generally is one of the most successful alternatives to expected utility theory\medskip
+        \item Is one of the standard behavioural approaches\medskip
+        \item It is designed for experimental settings\medskip
+        \item Extrapolating it to other setting requires care\medskip
+        \item It has strong limitations mostly stemming from probability weighting\medskip
+    \end{itemize}
 \end{frame}
 
 
