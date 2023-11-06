@@ -642,7 +642,7 @@
         \item Aware of time inconsistency, uses backward induction\medskip
         \item At node $(t, j), t \in [0,T-1]$:\medskip
         \begin{itemize}
-        \item If the value of continuing to gamble $V(\tilde{g_{t,j}}) > v(h(t+2-2j))$ exceeds value of leaving immediately, gamble\medskip
+        \item If the value of continuing to gamble $V(\tilde{g_{t, j}}) > v(h(t+2-2j))$ exceeds value of leaving immediately, gamble\medskip
         \item Agent rarely enters casino; only if  $\alpha,\lambda $ small,$\delta$ large\medskip
         \end{itemize}
     \end{itemize}
@@ -709,9 +709,9 @@
     \begin{itemize}
     \item Weighting function properties:
     \begin{align*}
-        w^-,w^+:[0,1] \rightarrow [0,1],\, \text{non-decreasing}\\
-        w^+(0) = w^-(0) = 0\\
-        w^+(1) = w^-(1) = 1
+        &w^-,w^+:[0,1] \rightarrow [0,1],\, \text{non-decreasing}\\
+        &w^+(0) = w^-(0) = 0\\
+        &w^+(1) = w^-(1) = 1
     \end{align*}
     \item Value function properties: continuous, increasing $V:\mathbb{R} \rightarrow \mathbb{R}$ with $V(r) = 0$\medskip
 \end{itemize}
@@ -724,7 +724,7 @@
        $\partial _-V(x)$ and $\partial _+V(x)$ at every wealth level $x$.\medskip
         \item Further, $\lambda = \sup _{x\in \mathbb{R} } \frac{\partial _-V(x)}{\partial _+V(x)} < \infty$ exists.\medskip
         \item $\Rightarrow$ kink not too extreme, no infinite loss aversion.\medskip
-        \item \citep{KahnemanTversky1979} does not work, requires minimal modification\medskip
+        \item \citet{KahnemanTversky1979} does not work, requires minimal modification\medskip
     \end{itemize}
 \end{assumption}
 \end{frame}
@@ -736,14 +736,16 @@
         \item $w^+(p)> \frac{\lambda}{1-p+\lambda p} = b_{\lambda}(p)$ \medskip
         \item $w^-(1-p)< \frac{1-p}{1-p+\lambda p} = b_{1/\lambda}(1-p)$  \medskip
 	\end{enumerate}
-    Satisfied by any common function of $w$.
 \end{assumption}
+\begin{itemize}
+\item     Satisfied by any common function of $w$.
+\end{itemize}
 \end{frame}
 
 
-\begin{frame}{Discussion of benchmark weighthing functions}
+\begin{frame}{Discussion of benchmark weighting functions}
     \begin{itemize}
-        \item Consider the weighting function \[b_\theta (p)=\frac{\theta p}{1-p+\theta p}\]
+        \item Consider the benchmark weighting function \[b_\theta (p)=\frac{\theta p}{1-p+\theta p}\]
         with $(\theta=1)$ and $b_\theta(0)=0, b_\theta(1)=1$.\medskip
         \item If $\theta>1$, $b$ is concave and above the diagonal.\medskip
         \item If $\theta<1$, $b$ is convex and below the diagonal.\medskip
@@ -752,7 +754,7 @@
 
 
 
-\begin{frame}{Discussion of benchmark weighthing functions}
+\begin{frame}{Discussion of benchmark weighting functions}
     \begin{itemize}
         \item Hence, Assumption~2 is satisfied: \[\omega ^{+}(5\%)> b_\lambda(5\%) \quad \text{and} \quad \omega ^{-}(95\%)> b_\frac{1}{\lambda}(95\%)\]
         \item At least one probability sufficiently overweighted by $\omega^+$: \[\omega^+(p)>b_{\lambda}(p) \geq p\]
@@ -821,7 +823,7 @@
         \item What does skewness preference in the small do?\medskip
         \item Consider Markov diffusion $ X= (X_t)_{t \in \mathbb{R}_+ }$
         \[dX_t = \mu(X_t)dt + \sigma (X_t)dW_t\]
-        \item Brownian motion $(W_t)_{t \in \mathbb{R}_+ }$, drift $\mu:\mathbb{R} \rightarrow \mathbb{R}$, volatility $\sigma: \mathbb{R}  \rightarrow (0,\infty)$ Lipschitz continuous.\medskip
+        \item Brownian motion $(W_t)_{t \in \mathbb{R}_+ }$, drift $\mu:\mathbb{R} \rightarrow \mathbb{R}$, volatility $\sigma: \mathbb{R}  \rightarrow (0,\infty)$ Lipschitz cont.\medskip
         \item Investment or gambling strategies: integrable stopping times $\tau$, adapted filtration $(\mathcal{F} _t)_{t \in \mathbb{R}_+ }$\medskip
         \item CPT utility of strategy $\tau$ given $\mathcal{F} _t$, $CPT(X_\tau,\mathcal{F}_t)$\medskip
         \item Hence, we have  time inconsistency \citep{Barberis2012a}: $\tau$ may changed later\medskip
@@ -843,7 +845,7 @@
         \item Under Assumptions 1 and 2, the naive CPT agent never stops.\medskip
         \item Reference point can be dynamic and change\medskip
         \item Information: simple two-threshold strategy:
-        Stoping if utility drop slightly while continuing until utility raises a lot always exceeds stopping.\medskip
+        Stopping if utility drop slightly while continuing until utility raises a lot always exceeds stopping.\medskip
 	\end{itemize}
 \end{theorem}
 \end{frame}
